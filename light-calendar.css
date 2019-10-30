@@ -1,0 +1,100 @@
+.lc-calendar{
+  width: 100%;
+  padding: 0px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.lc-calendar .lc-header {
+  background: #e8e8e8;
+  padding: 10px;
+}
+.lc-calendar .lc-arrow-left, .lc-calendar .lc-arrow-right {
+  border: 1px solid #ff930d;
+  border-width: 0 0 2px 2px;
+  width: 14px;
+  height: 14px;
+  line-height: 0;
+  font-size: 0;
+  margin: 5px;
+}
+.lc-calendar .lc-arrow-left{
+  float: left;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.lc-calendar .lc-arrow-right {
+  float: right;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.lc-calendar .lc-month {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 22px;
+    line-height: 1;
+}
+.lc-calendar .lc-cal-days {
+  text-align: center;
+  width: 100%;
+  table-layout: fixed;
+}
+.lc-calendar .lc-cal-days tr {
+  border-bottom: 1px solid #ababab;
+}
+.lc-calendar .lc-cal-days tr:first-child {
+  background: #e8e8e8;
+}
+.lc-calendar .lc-cal-days tr th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.lc-calendar .lc-cal-days tr td {
+  padding: 2px 0;
+}
+.lc-calendar .lc-cal-days tr td .number-container {
+  width: 75%;
+  margin: auto;
+  position: relative;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.lc-calendar .lc-cal-days tr td .number-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.lc-calendar .lc-cal-days tr td .number-container .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lc-calendar .lc-cal-days tr td .number-container.notification .number::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #bbbbbb;
+  position: absolute;
+  border-radius: 100%;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lc-calendar .lc-cal-days tr td .number-container.notification.active .number::after {
+  background: #00dcff;
+}
+.lc-calendar .lc-cal-days tr td .number-container.active {
+  background-color: #ff930d;
+}
+.lc-calendar .lc-cal-days tr td .number-container.active .number {
+  color: white;
+}
